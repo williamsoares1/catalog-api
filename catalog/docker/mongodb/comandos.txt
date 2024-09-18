@@ -1,0 +1,8 @@
+docker exec -it mongodb mongosh -u adm -p 123
+
+show dbs
+
+use catalog
+
+db.product.find()
+db.category.find()
