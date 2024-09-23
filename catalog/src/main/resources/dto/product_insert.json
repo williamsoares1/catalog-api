@@ -1,6 +1,15 @@
-{
-    "title": "product 1",
-    "description": "A nice product 1",
-    "price": 13.50,
-    "ownerId": "12345"
-}
+[
+    {
+        "title": "product 1",
+        "description": "A nice product 1",
+        "price": 13.50,
+        "ownerId": "12345"
+    },
+    {
+        "title": "product 2",
+        "description": "A nice product 2",
+        "categoryId": "",
+        "price": 45.90,
+        "ownerId": "12345"
+    }
+]
