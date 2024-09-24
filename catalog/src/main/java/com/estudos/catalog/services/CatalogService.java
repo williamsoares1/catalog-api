@@ -1,27 +1,20 @@
 package com.estudos.catalog.services;
 
+import java.util.List;
 import java.util.Optional;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Service;
 
 import com.estudos.catalog.dto.request.CategoryRequestDTO;
 import com.estudos.catalog.dto.request.ProductRequestDTO;
 import com.estudos.catalog.dto.response.CategoryResponseDTO;
 import com.estudos.catalog.dto.response.ProductResponseDTO;
+import com.estudos.catalog.infra.aws.s3.dto.CatalogDTO;
 
 @Service
 public interface CatalogService {
 
-    Page<ProductResponseDTO> getAllProducts(@PageableDefault(size = 5, page = 0) Pageable pageable);
-
-    Optional<ProductResponseDTO> getProductById(String productId);
-
-    Page<CategoryResponseDTO> getAllCategories(@PageableDefault(size = 10, page = 0) Pageable pageable);
-
-    Optional<CategoryResponseDTO> getCategoryById(String categoryId);
+    List<CatalogDTO> getCatalog(String ownerId);
 
     Optional<ProductResponseDTO> postProduct(ProductRequestDTO dto);
 
