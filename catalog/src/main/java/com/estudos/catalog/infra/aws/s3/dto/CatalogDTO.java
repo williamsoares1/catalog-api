@@ -10,7 +10,7 @@ import lombok.Data;
 public class CatalogDTO {
     private String categoryTitle;
     private String categoryDescription;
-    private List<ProductDTO> itens;
+    private List<ProductDTO> items;
 
     @Data
     @Builder
